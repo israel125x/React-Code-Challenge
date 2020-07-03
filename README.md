@@ -13,12 +13,17 @@ Extra :
 codigo de la Firebase Function del backend 
 
 /-------------------------------------------------------------------
+
+
 //The Cloud Functions for Firebase SDK to create Cloud Functions and setup triggers.
 const functions = require('firebase-functions');
+
+
 
 // The Firebase Admin SDK to access the Firebase Realtime Database.
 const admin = require('firebase-admin');
 admin.initializeApp();
+
 
 
 exports.getfavoritos = functions.https.onRequest(async (req, res) => {
@@ -41,6 +46,7 @@ exports.getfavoritos = functions.https.onRequest(async (req, res) => {
             res.send(keys);
         });  
 });
+
 
 
 exports.insertfavoritos = functions.https.onRequest(async (req, res) => {
@@ -66,5 +72,7 @@ exports.insertfavoritos = functions.https.onRequest(async (req, res) => {
     const snapshot = await admin.database().ref('favoritos').child(hash).child(id).remove();
     res.send("OK");
   });
+
+
 
 /-------------------------------------------------------------------
