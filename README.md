@@ -1,3 +1,3 @@
-# clarovideotest
+# Prueba tecnica GONET
 prueba tecnica 
 
