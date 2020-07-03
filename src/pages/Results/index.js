@@ -1,6 +1,6 @@
 import  React, { useEffect, useState }  from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Container, CircularProgress , Typography} from '@material-ui/core';
+import { Container, CircularProgress, Button, Typography} from '@material-ui/core';
 import queryString from 'query-string';
 
 import { searchMovie } from '../../redux/actions/search';
@@ -22,12 +22,16 @@ export default ({ location }) => {
          }
          
      });
+     const handleReturn= event=>{
+        window.open("https://examen-e5708.web.app/", "_self");
+    }
 
      const renderMovies = () => {
          console.log('movies renderMovies: ',movies);
          if (movies){
             return (<div>
                     <div style={{height:'50px'}}></div>
+                    <Button variant="contained" color="primary" size="large" onClick={handleReturn} >Regresar</Button>
                     <div>
                      <Typography style={{color:'white'}}>Resultados del la busqueda: </Typography>   
                     </div>
