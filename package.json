@@ -18,7 +18,7 @@
     "ua-parser-js": "^0.7.21"
   },
   "devDependencies": {
-    "react-scripts": "1.1.4"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
